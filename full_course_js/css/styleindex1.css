@@ -1,4 +1,12 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
+    font-size: 1em;
+}
+.button_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lable_div {
+    text-align: center;
 }

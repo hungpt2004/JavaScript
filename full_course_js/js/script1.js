@@ -85,3 +85,154 @@
 // }
 
 
+// ------- DECREASE/RESET/INCREASE -------
+// let ずつ = 0;
+
+// document.getElementById('decrease').onclick = function (){
+//     ずつ -= 1;
+//     document.getElementById('countLabel').innerHTML = ずつ;
+// }
+// document.getElementById('reset').onclick = function (){
+//     ずつ = 0;
+//     document.getElementById('countLabel').innerHTML = ずつ;
+// }
+// document.getElementById('increase').onclick = function (){
+//     ずつ += 1;
+//     document.getElementById('countLabel').innerHTML = ずつ;
+// }
+
+
+// -------- RANDOM NUMBER GENERATOR (TAI/XIU) --------
+//let x = Math.floor(Math.random() * 20); //Đây là random từ 0 -> 20
+//let x = Math.floor(Math.random() * 20) + 1; //Đây là random từ 1 -> 20
+// let x = 0;
+// let y = 0;
+// let z = 0;
+// var result = 0;
+// document.getElementById('xSubmit').onclick = function (){
+//     x = Math.floor(Math.random() * 6) + 1;
+//     y = Math.floor(Math.random() * 6) + 1;
+//     z = Math.floor(Math.random() * 6) + 1;
+//     result = x+y+z;
+//     document.getElementById('xLabel').innerHTML = result; 
+//     if(result % 2 == 0){
+//         document.getElementById('resultLabel').innerHTML = 'Tài';
+//     } else {
+//         document.getElementById('resultLabel').innerHTML = 'Xỉu';
+//     }
+// }
+
+
+// Useful String Properties & Methods 
+// slice() extracts a section of a string and returns it as a new string 
+// without modifying the original string
+
+// let fullName = "Snoop Dogg";
+// let firstName;
+// let lastName;
+
+// firstName = fullName.slice(0,4);
+// lastName = fullName.slice(4);
+
+// firstName = fullName.slice(0,fullName.indexOf(" "));
+// lastName = fullName.slice(fullName.indexOf(" ")+1);
+
+// console.log(firstName);
+// console.log(lastName);
+
+
+//59:12
+//13. Method chaining
+// let userName = "bro";
+// let letter = userName.charAt(0);
+// letter = letter.toUpperCase();
+
+// console.log(letter);
+
+//1:08:05
+//15.checked property
+// document.getElementById("myButton").onclick = function () {
+//     const myCheckBox = document.getElementById("myCheckBox");
+//     const visaBtn = document.getElementById("visaBtn");
+//     const masterBtn = document.getElementById("masterCardBtn");
+//     const paypalBtn = document.getElementById("paypalBtn");
+
+//     if(visaBtn.checked){
+//         console.log("Payment by visa card");
+//     }
+//     else if(masterBtn.checked){
+//         console.log("Payment by master card");
+//     }
+//     else if(paypalBtn.checked){
+//         console.log("Payment by paypal")
+//     }
+//     else {
+//         console.log("Please choose payment method");
+//     }
+
+//     if(myCheckBox.checked){
+//         console.log("You are subcribed !");
+//     }
+//     else {
+//         console.log("You are not subcribed");
+//     }
+// }
+
+
+//1:15 
+//16.Switches
+// document.getElementById("myButton").onclick = function () {
+//     let grade = document.getElementById("grade").value;
+//     grade = Number(grade);
+    
+//     while(isNaN(grade) || grade < 0 || grade > 100){
+//         grade = window.prompt("Please enter your grade (0-100): ");
+//         grade = Number(grade);
+//     }
+
+//     switch(true){
+//         case grade >= 90:
+//             console.log("You did great !");
+//             break;
+//         case grade >= 80:
+//             console.log("You did it good");
+//             break;
+//         case grade >= 70:
+//             console.log("You did it okay !");     
+//             break;
+//         case grade >= 60: 
+//             console.log("You passed...barely");
+//             break;
+//         default:
+//             console.log("You failed in the exam !");
+//     }
+// }
+
+//1:37:06
+//Nested loop = vòng lặp lồng nhau
+// let symbol = window.prompt('Enter a symbol to use: ');
+// let rows = window.prompt('Enter # of rows: ');
+// let columns = window.prompt('Enter # of columns: ');
+
+// for(let i = 1; i <= rows; i++){
+//     for(let j = 1; j <= columns; j++){
+//         document.getElementById('myRectangle').innerHTML += symbol;
+//     }
+//     document.getElementById('myRectangle').innerHTML += i;
+// }
+
+//1:38:11
+//Function = define code once, and use it many times;
+//           to perform some code, call the function name
+let username = 'Hung';
+let age = 21;
+function happyBirthday(){
+    console.log('Happy birthday to you!');
+    console.log('Happy birthday to you!');
+    console.log('Happy birthday to you!');
+    console.log('Happy birthday to you!');
+    console.log('Happy birthday dear',username);
+    console.log('You are ',age,' years old!');
+}
+
+happyBirthday();
