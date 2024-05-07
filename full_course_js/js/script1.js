@@ -224,15 +224,137 @@
 //1:38:11
 //Function = define code once, and use it many times;
 //           to perform some code, call the function name
-let username = 'Hung';
-let age = 21;
-function happyBirthday(){
-    console.log('Happy birthday to you!');
-    console.log('Happy birthday to you!');
-    console.log('Happy birthday to you!');
-    console.log('Happy birthday to you!');
-    console.log('Happy birthday dear',username);
-    console.log('You are ',age,' years old!');
-}
+// let username = 'Hung';
+// let age = 21;
+// function happyBirthday(){
+//     console.log('Happy birthday to you!');
+//     console.log('Happy birthday to you!');
+//     console.log('Happy birthday to you!');
+//     console.log('Happy birthday to you!');
+//     console.log('Happy birthday dear',username);
+//     console.log('You are ',age,' years old!');
+// }
 
-happyBirthday();
+// happyBirthday();
+
+//2:06:31
+// const answer = Math.floor(Math.random() * 10 + 1);
+// let guesses = 0;
+// document.getElementById('myButton').onclick = function () {
+//     let num = document.getElementById('answerBtn').value;
+//     num = Number(num);
+//     guesses += 1;
+
+//     if(num == answer){
+//         alert(`${answer} is the #. It took you ${guesses}`);
+//     }
+//     else if (num < answer){
+//         alert("Too small");
+//     }
+//     else{
+//         alert("Too large");
+//     }
+// }   
+
+//2:07:05
+//Temperature conversion program
+// function toCelcius(temp){
+//     return (temp - 32) * (5/9);
+// }
+// function toF(temp){
+//     return temp * 9/5 + 32;
+// }
+// document.getElementById('myButton').onclick = function () {
+//     let temp;
+//     if(document.getElementById('cBtn').checked){
+//         temp = document.getElementById('tempBtn').value;
+//         temp = Number(temp);
+//         temp = toCelcius(temp);
+//         document.getElementById('tempLabel').innerHTML = temp + "C";
+//     }
+//     else if (document.getElementById('fBtn').checked){
+//         temp = document.getElementById('tempBtn').value;
+//         temp = Number(temp);
+//         temp = toF(temp);
+//         document.getElementById('tempLabel').innerHTML = temp + "F";
+//     }
+//     else {
+//         document.getElementById('tempLabel').innerHTML = "Select the unit";
+//     }
+// }
+
+
+//Arrays JS
+//const array = [item1, item2, item3, ...];
+
+//ForEach for JS
+// let text = ""
+// const fruits = ["apple", "orange", "cherry"];
+// fruits.forEach(myFunction);
+// document.getElementById("demo").innerHTML = text;
+
+// function myFunction (item, index){
+//     text += index + ":" + item + "<br>";
+// }
+
+// ----- REST PARAMETERS -----
+//3:39:19
+// function openFridge(...foods){
+//     console.log(...foods);
+// }
+// function getFood(...foods){
+//     return foods;
+// }
+
+// const food1 = "pizza";
+// const food2 = "bun bo";
+// const food3 = "pho";
+// const food4 = "hotdog";
+// const food5 = "ramen";
+
+// openFridge(food1,food2,food3,food4,food5);
+
+// const foods = getFood(food1,food2,food3,food4,food5);
+
+//sum
+// function sum (...numbers){
+//     let result = 0;
+//     for(let number of numbers){
+//         result += number;
+//     }
+//     return result;
+// }
+// sum(1,2,3,4,5,6);
+// console.log(sum(1,2,3,4,5,6));
+
+
+
+// ----- ARRAYS -------
+// let fruits = ["apple","orange","banana"];
+
+// //fruits.push("lemon"); - add element to array
+// //fruits.pop();         - removes last element
+// //fruits.unshift("Mango"); - add element to beginning
+// //fruits.shift();
+
+// let length = fruits.length;
+// let index = fruits.indexOf("kiwi");
+
+// console.log(fruits);
+
+// ----- 2D ARRAYS ------
+// An array of arrays
+//2:27:25
+// let fruits = ["apple","orange","banana"];
+// let meats = ['eggs','pussy','dick'];
+// let vegetables = ['carrot', 'onions', 'potatoes'];
+
+// change items => groceryList[row][column] = 'change';
+// let groceryList = [fruits, vegetables, meats];
+
+// for(let list of groceryList){
+//     for(let items of list){
+//         console.log(items);
+//     }
+// }
+
