@@ -1,0 +1,64 @@
+.post-item{
+    margin-right: 50px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgb(238, 221, 247);
+    text-align: center;
+    border: 0.2px grey;
+    transition: ease-in-out 0.2s;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(30px);
+    animation: fadeInUp 2s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Di chuyển phần tử lên vị trí ban đầu */
+    }
+}
+
+.post-item:hover{
+    transition: ease-in-out 0.2s;
+    background-color: rgb(163, 89, 203);
+    color: white;
+}
+img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;  
+}
+.post-description{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Hiển thị dấu ba chấm */
+}
+.posts-list{
+    align-items:center;
+    justify-content: center;
+    display: flex;
+}
+.post-button{
+    padding: 5px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(27, 95, 197);
+    border-color:lightskyblue;
+}
+.post-button:hover{
+    color: rgb(163, 89, 203);
+    background-color: white;
+    transition: ease-in-out 0.2s;
+    scale: calc(1.1);
+}
+s{
+    color: red;
+}

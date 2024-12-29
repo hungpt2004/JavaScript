@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 200vh;
+            /* Để có thể cuộn trang */
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            border-radius: 10px;
+            opacity: 0;
+            /* Ban đầu các box không hiển thị */
+            transform: translateY(100px);
+            /* Đặt vị trí ban đầu để phần tử trượt vào */
+            transition: all 0.5s ease;
+            /* Thêm hiệu ứng chuyển động */
+        }
+
+        /* Hiệu ứng khi phần tử vào màn hình */
+        .box.visible {
+            opacity: 1;
+            transform: translateY(0);
+            /* Di chuyển đến vị trí ban đầu */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+    </div>
+
+    <script>
+        // Lắng nghe sự kiện scroll để kiểm tra khi phần tử xuất hiện trong vùng nhìn thấy
+        const boxes = document.querySelectorAll('.box');
+
+        function checkVisibility() {
+            boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                // Kiểm tra xem phần tử có xuất hiện trong màn hình hay không
+                if (boxTop < windowHeight * 0.75) {
+                    box.classList.add('visible');  // Thêm lớp visible khi phần tử xuất hiện
+                } else {
+                    box.classList.remove('visible');  // Loại bỏ lớp nếu phần tử chưa vào màn hình
+                }
+            });
+        }
+
+        // Kiểm tra khi người dùng cuộn trang
+        window.addEventListener('scroll', checkVisibility);
+
+        // Chạy một lần ngay khi tải trang để phần tử có thể hiển thị nếu đã xuất hiện
+        checkVisibility();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Props Element Types</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="/css/styleindex2.css">
+</head>
+<body>
+    <div id="root"></div>
+</body>
+    <script type="text/babel">
+
+        // function Input(props){
+        //     return (
+        //         <div>
+        //             <label>{props.label}</label>
+        //             <input type={props.type} placeholder={props.placeholder} />
+        //         </div>       
+        //     );
+        // }
+
+        // //Set giá trị default cho props theo tên function
+        // Input.defaultProps = {
+        //     type:'text',
+        //     placeholder:'Enter value...'
+        // }
+
+
+        function Input({label, ...inputProps}){
+            return (
+                <div>
+                    <label>{label}</label>
+                    <input {...inputProps} />
+                </div>    
+            );
+        }
+
+        function Button({children}){
+            return (
+                <button>{children}</button>
+            );
+        }
+
+        function List({data, children}){
+            return (
+                <ul>
+                  {data.map((item,index) => {
+                     return children(item,index);
+                  })}  
+                </ul>    
+            );
+        }
+
+        function App(){
+            const cars = ['BMW', 'Audi', 'Mercedes'];
+            return (
+                <div>
+                    <Input label='Username' type='text' placeholder='Enter username...'/>
+                    <p style={{color:'red'}}>Nằm trong thẻ thì là children</p>
+                    <Button>Click me !</Button>
+                    <List data = {cars}>
+                        {(items,index) => <li key={index}>{items}</li>}
+                    </List>    
+                </div>
+            );
+        }
+
+        console.log(<App/>);
+
+        ReactDOM.render(<App/>,document.getElementById('root'));
+
+    </script>
+</html>

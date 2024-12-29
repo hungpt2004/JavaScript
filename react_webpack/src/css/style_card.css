@@ -1,0 +1,159 @@
+.card{
+    width: 200px;
+    height: 100px;
+    background-color: aquamarine;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    transition: ease-in-out 0.4s;
+}
+.card:hover{
+    transform: translateY(-5px);
+    transition: ease-in-out 0.4s;
+}
+
+
+.full_navbar{
+    display: flex;
+    width: 100%;
+    background-color: #0056b3;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.item_navbar{
+    color: white;
+    margin-right: 100px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all ease-in-out 0.5s;
+    border-radius: 10px;
+    border: white;
+}
+
+.item_navbar:hover{
+    color: #aa66e5;
+    transition: all ease-in-out 0.5s;
+}
+
+.form_login {
+  width: 100%;
+  max-width: 400px;
+  display: flex;           /* Sử dụng Flexbox */
+  flex-direction: column;  /* Sắp xếp các phần tử theo chiều dọc */
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #8124d3;
+  
+  /* Border */
+  border-radius: 15px;
+}
+
+.info-form{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: white;
+}
+
+input {
+    width: 350px;
+    height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: 4px solid transparent;
+    color: black;
+    opacity: 0.7;
+    transition: all ease 0.5s;
+}
+
+input:focus{
+    cursor: pointer;
+    outline: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 4px solid #4caf50; /* Tăng kích thước border và đổi màu */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Thêm hiệu ứng ánh sáng */
+}
+
+input::placeholder{
+    color: black;
+    font-weight: 100;
+    opacity: 0.7; /* Làm cho màu nhạt hơn */
+}
+
+
+.button-login{
+    display: flex;
+    border-radius: 5px;
+    padding: 5px 20px;
+    /* Căn giữa ngang */
+    margin: 0 auto;
+    width: 30%;
+    /* Justify-content căn giữa khi ở bên trong và được đặt width */
+    justify-content: center; 
+}
+
+.button-login:active{
+    transition: all ease 0.5s;
+    transform: translateY(5px);
+}
+
+
+/* Định dạng button 3D */
+.button_navbar {
+    padding: 10px 30px;          /* Khoảng cách bên trong */
+    font-size: 20px;  
+    font-family: 'Times New Roman', Times, serif;           /* Kích thước chữ */
+    border: 2px solid #ffffff;  /* Viền button */
+    border-radius: 8px;         /* Bo góc */
+    background-color: #ffffff;  /* Màu nền */
+    color: black;               /* Màu chữ */
+    cursor: pointer;            /* Con trỏ chuột dạng pointer */
+    outline: none;              /* Loại bỏ outline khi nhấn */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5); /* Bóng đổ 3D */
+    transition: all 0.3s ease;   /* Hiệu ứng chuyển động */
+  }
+  
+  /* Hiệu ứng hover: khi di chuột vào button */
+  .button_navbar:hover {
+    background-color: #8124d3; 
+    border: 2px solid #8124d3;
+    color: white;  /* Màu nền khi hover */
+    box-shadow: 0 15px 25px #a357e6; /* Bóng đổ mạnh hơn */
+    transform: translateY(-5px);  /* Nâng button lên */
+  }
+  
+  /* Hiệu ứng khi nhấn (active state) */
+  .button_navbar:active {
+    background-color: #003f7f;   /* Màu nền khi nhấn */
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.6); /* Bóng đổ nhẹ */
+    transform: translateY(2px);   /* Đẩy button xuống khi nhấn */
+  }
+
+  

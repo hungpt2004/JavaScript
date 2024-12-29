@@ -4,74 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>My Website</title>
-    <link rel="stylesheet" href="/full_course_js/css/styleindex1.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <!-- <link rel="stylesheet" href="/full_course_js/css/styleindex1.css"> -->
 </head>
 <body>
-    <!--BÀI TẬP TÍNH CẠNH HUYỀN TAM GIÁC VUÔNG -->
-    <!-- <label id="aLabel">Enter A:</label><br>
-    <input type="text" id="first"/><br>
-    <label id="bLabel">Enter B:</label><br>
-    <input type="text" id="second"/><br>
-    <button type="submit" id="mySubmit">Submit</button><br>
-    <label id="cLabel"></label><br> -->
-    
-    <!--BÀI TẬP ĐẾM SỐ KHI NHẤN NÚT-->
-    <!-- <div class="lable_div">
-        <label id="countLabel">0</label>
-    </div>
-    <div class="button_div">
-        <button type="submit1" id="decrease">ひえる</button>
-        <button type="submit2" id="reset">りせとる</button>
-        <button type="submit3" id="increase">ふえる</button>
-    </div> -->
+    <h1 id="heading">Hello guys</h1>
+    <p  id="title"></p>
+    <!-- <script type="module" src="/js/app.js"></script> -->
+    <script>
+        //Lay noi dung cua the theo id hoac class
+        const h1 = document.querySelector('#heading');
+        console.log(h1); //object
+        console.dir(h1); //object
+        h1.style.color = 'blue'; //add color
+        h1.innerText = 'Welcome'; //text in card
+        
+        //create element
+        const h2 = document.createElement('h2');
+        h2.textContent = 'Cai lon ma';
+        h2.style.color = 'green';
+        h2.style.fontSize = '24px';
+        console.log(h2);
 
-    <!--BÀI TẬP TẠO RA CÁC SỐ RANDOM-->
-    <!-- <div class="label_div">
-        <label id="xLabel"></label>
-    </div>
-    <button type="submit" id="xSubmit">Generate</button>
-    <div class="label-div">
-        <label id="resultLabel"></label>
-    </div> -->
+        //add to random html card already exist
+        const text = document.querySelector('#title');
+        text.appendChild(h2);
 
-    <!--Check Box checked property-->
-    <!-- <label for="myCheckBox">subscribe</label>
-    <input type="checkbox" id="myCheckBox" ><br>
+        //add to body
+        const p = document.createElement('p');
+        p.textContent = 'Cai lon ma';
+        p.style.fontSize = '30px';
+        document.body.appendChild(p);
 
-    <label for="visaBtn">Visa</label>
-    <input type="radio" name="card" id="visaBtn">
-    <label for="masterCardBtn">MasterCard</label>
-    <input type="radio" name="card" id="masterCardBtn">
-    <label for="paypalBtn">Paypal</label>
-    <input type="radio" name="card" id="paypalBtn"><br> 
-    <button id="myButton">Submit</button>
-    -->
 
-    <!--Switch Case-->
-    <!-- <label for="myGrade">Grade: </label>
-    <input type="text" id="grade"/><br>
-    <button type="submit" id="myButton">Submit</button> -->
-
-    <!-- Number Guessing Game -->
-    <!-- <h3>Number Guessing Game</h3>
-    <p>Pick a # between 1 - 10</p>
-    <label for="answerBtn">Enter a guess:</label>
-    <input type="text" id="answerBtn" name="card"/>
-    <button type="submit" id="myButton">Submit</button> -->
-
-    <!-- Temperature Conversion -->
-    <!-- <label for="tempBtn">Enter a temperature: </label>
-    <input type="text" id="tempBtn" /><br>
-    <p>Convert to: </p>
-    <input type="radio" name="card" id="cBtn"/>Celcius<br><br>
-    <input type="radio" name="card" id="fBtn"/>Fahrenheit<br><br>
-    <button type="submit" id="myButton">Convert</button>
-    <label id="tempLabel"></label> -->
-
-    <!-- Test for each JS -->
-    <!-- <p id="demo"></p> -->
-
-    
-    <script src="/full_course_js/js/script1.js"> </script>
+    </script>
 </body>
 </html>

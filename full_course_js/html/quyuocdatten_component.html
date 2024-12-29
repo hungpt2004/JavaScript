@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Element Types</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="/css/stylecourse.css">
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+
+    const Form = {
+        Input(){
+            return <input/>;
+        },
+        CheckBox(){
+            return <input type='checkbox' />
+        }
+    }
+        
+    //Button dùng cho nhiều trường hợp
+    const Button = ({title, href, onClick}) => {
+        let Component = 'button'
+        const props = {};
+        //Nếu như là href
+        if(href){
+            Component = 'a';
+            props.href = href;
+        }
+
+        //Nếu như có onclick
+        if(onClick){
+            props.onClick = onClick;
+        }
+        return (
+            <Component
+                {...props}
+            >
+            {title}    
+            </Component>
+        )
+    }
+
+    
+
+    function App(){
+        // var type = 'CheckBox';
+        // const Component = Form[type];
+
+        return (
+            <>
+                <Button 
+                    title = 'Click Me !'
+                    href = 'https://react.dev/learn/describing-the-ui'
+                    onClick = {() => console.log(Math.random())}
+                />
+            </>
+        );
+    }
+
+    console.log(<App/>);
+
+    ReactDOM.render(<App/>, document.getElementById('root'));
+
+</script>
+
+</html>

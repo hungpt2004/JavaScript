@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <link rel="stylesheet" href="/css/styleindex2.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <div id="bai2"></div>
+    <div id="bai3"></div>
+    <p></p>
+    <script type="text/babel">
+        // const post = document.createElement('div');
+        // post.className = 'post-item';
+        // const h2 = document.createElement('h2');
+        // h2.innerText = 'Học ReactJS';
+        // h2.title = 'Học React Tại F8';
+        // const p = document.createElement('p');
+        // p.innerText = 'Học ReactJS từ cơ bản tới nâng cao';
+
+        // post.appendChild(h2);
+        // post.appendChild(p);
+
+        // // document.body.appendChild(post);
+
+        // //React
+        // const reactPost = React.createElement(
+        //     'div',
+        //     {
+        //         className:'post-item'
+        //     },
+        //     React.createElement('h2', { title: 'Hoc React tai F8'},'Hoc ReactJS'),
+        //     React.createElement('p',null,'Hoc ReactJS tu co ban -> nang cao')
+        // );
+
+        // console.log(reactPost);
+
+        // //Sử dụng ReactDOM để render UI
+        // const root = document.getElementById('root');
+
+        // //React DOM
+        // ReactDOM.render(reactPost, root);
+
+        // const hello = 'Hello Hà My';
+
+        // //Bai 1
+        // const ulReact = React.createElement('ul',null,
+        //     React.createElement('li',null,'JavaScript'),
+        //     React.createElement('li',null,'ReactJS'),
+        // );
+
+        // //Thông qua thư viện Babel
+        // //const ulReact = <ul><li><li></ul>
+
+        // const main = document.getElementById('bai2');
+        // ReactDOM.render(ulReact, main);
+
+
+        //Bai tap
+        const courses = [
+            {
+                name: 'HTML,CSS'
+            },
+            {
+                name: 'Responsive Web'
+            },
+            {
+                name: 'ReactJS'
+            }
+        ]
+
+        const ulList = 
+        <ul>
+            {courses.map((course,index) => {
+                return <li key={index}>{course.name}</li>
+            })}
+        </ul>
+
+        console.log(ulList);
+
+        const bai3 = document.getElementById('bai3');
+
+        ReactDOM.render(ulList, bai3);
+
+    </script>
+</body>
+
+</html>

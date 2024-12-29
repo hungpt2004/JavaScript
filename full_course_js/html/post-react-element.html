@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Element Types</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="/css/styleindex2.css">
+</head>
+<body>
+    <div id="root"></div>
+</body>
+    <script type="text/babel">
+
+        //*
+        //Function component
+        //Thay vì truyền tên cụ thể thì ta chỉ cần truyền props
+        //props.title, props.name,...
+        //*
+
+        function PostItem(props){
+            
+
+            return (
+                <div className='post-item'>
+                    <div className='image-include' style={{color:'green'}}>
+                        <img src={props.imageUrl} alt={props.title}/>    
+                    </div>
+                    <h2 className='post-title'>{props.title}</h2>
+                    <p className='post-content'>{props.content}</p>
+                    <p className='post-publish'>1 Day before</p>
+                    <button className='post-button' onClick={()=>console.log(Math.random())}>Click me</button>
+                </div>    
+            );
+        }
+
+        const app = (
+            <div className="posts-list">
+                <PostItem imageUrl='https://images.hdqwalls.com/wallpapers/waterfall-rocks-4k-ch.jpg' title='C# Ngon ngu lap trinh' content='Khoa hoc tuyet voi'/>
+            </div>
+        );
+
+        console.log(app);
+
+        ReactDOM.render(app,document.getElementById('root'));
+
+    </script>
+</html>
