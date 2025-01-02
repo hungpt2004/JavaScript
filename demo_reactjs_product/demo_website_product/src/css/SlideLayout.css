@@ -1,0 +1,24 @@
+.slide_item{
+   background-color: #ccc; 
+   text-align: center; 
+   line-height: 80vh;
+   font-size: 24px 
+}
+
+.slide_img{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+
+/* Tùy chỉnh vị trí và kích thước indicator */
+.carousel-indicators {
+   position: absolute;
+   bottom: 20px; /* Khoảng cách từ dưới cùng */
+   display: flex;
+   justify-content: start; /* Căn giữa */
+   align-items: start;
+   gap: 10px; /* Khoảng cách giữa các nút */
+ }
+ 

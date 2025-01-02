@@ -1,0 +1,70 @@
+.card_img {
+   width: 100%;
+}
+
+.card_adv {
+   cursor: pointer;
+   position: relative;
+   overflow: hidden;  /* Đảm bảo lớp overlay không bị văng ra ngoài */
+}
+
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: black;
+   opacity: 0.4;
+   z-index: 1;  /* Đảm bảo overlay nằm dưới văn bản */
+   transform: translateX(0);  /* Bắt đầu từ bên ngoài */
+   transition: transform 0.5s ease;  /* Tạo hiệu ứng di chuyển mượt mà */
+}
+
+.card_adv:hover .overlay {
+   transform: translateX(-100%);  /* Khi hover, overlay di chuyển vào trong */
+}
+
+.card_text {
+   position: absolute;
+   z-index: 2;  /* Đảm bảo văn bản ở trên lớp overlay */
+   color: white;
+   text-align: center;
+}
+
+.card_text.title {
+   top: 70%;  /* Đặt vị trí của tiêu đề */
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 22px;
+}
+
+.card_text.des {
+   top: 78%;  /* Đặt vị trí của mô tả */
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 15px;
+}
+
+.detail_button.select {
+   position: absolute;
+   z-index: 3;  /* Đảm bảo nút nằm trên các phần tử khác */
+   color: white;
+   background-color: black;
+   transition: ease-in 0.2s;
+   border-radius: 5px;
+   padding: 5px 25px;
+   top: 88%;  /* Đặt vị trí của nút */
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 15px;
+}
+
+.detail_button.select:hover {
+   color: black;
+   background-color: white;
+   transition: ease-out 0.2s;
+   border-color: white
+}
+
+

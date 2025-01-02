@@ -1,0 +1,43 @@
+.card_news{
+   width: 100%;
+   margin-bottom: 2;
+   height: 200px;
+}
+.news_text {
+   font-size: 16px;
+   cursor: pointer;
+}
+
+.news_text.date{
+   font-size: 16px;
+   font-weight: 400;
+   cursor: pointer;
+   color: grey;
+}
+
+.news_text.content{
+   font-size: 16px;
+   font-weight: 350;
+   cursor: pointer;
+   color: black;
+}
+
+.img_first:hover{
+   scale: calc(1.1);
+   transition: ease-in-out 0.5s;
+}
+
+.img_first{
+   transition: ease 0.5s;
+   cursor: pointer;
+}
+
+.fake_news{
+   height: 500px;
+   width: 100%;
+}
+
+.fake_news.plus{
+   height: 450px;
+   width: 100%;
+}
